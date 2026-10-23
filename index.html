@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Sakshi ♥</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<div class="music">
+  <button id="musicBtn" class="icon-btn" aria-label="Play music">🔈</button>
+  <span id="musicTitle">Birthday song</span><i class="bars" aria-hidden="true"><b></b><b></b><b></b></i>
+  <audio id="audio" src="the_mountain-happy-birthday-508020.mp3" loop preload="none"></audio>
+</div>
+
+<!-- 1 GATE -->
+<main id="gate" class="screen active dark">
+  <form id="gateCard" class="paper gate-card" autocomplete="off">
+    <div class="lock" aria-hidden="true">🔒</div>
+    <p class="eyebrow">A LITTLE SECRET FOR</p>
+    <h1>SAKSHI</h1>
+    <p>Something beautiful is waiting behind this tiny lock.</p>
+    <label for="passkey" class="eyebrow">Enter the passkey</label>
+    <input id="passkey" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY" aria-describedby="hint err">
+    <p id="hint" class="small">Hint: A special date, just for you ✨</p>
+    <p id="err" class="err" role="alert"></p>
+    <button class="btn" type="submit">Open my surprise ♥</button>
+    <p class="small">Made with a ridiculous amount of love</p>
+  </form>
+</main>
+
+<!-- 2 LOADING -->
+<main id="loading" class="screen center">
+  <div class="env-mini" aria-hidden="true">✉️<span class="glow">♥</span></div>
+  <div class="ring" aria-hidden="true"></div>
+  <p id="loadMsg" class="script" aria-live="polite">Unlocking something special...</p>
+</main>
+
+<!-- 3 WELCOME -->
+<main id="welcome" class="screen">
+  <div class="split">
+    <section class="left">
+      <p class="script">🎂 HAPPY BIRTHDAY 🎈</p>
+      <p class="eyebrow">THE WORLD GOT BRIGHTER TWENTY-TWO YEARS AGO</p>
+      <h2 class="big">Happiest<br><em>22nd</em> Birthday</h2>
+      <p class="plate">SAKSHI</p>
+      <p class="lede">To someone special, my favorite person, and the reason ordinary days feel magical.</p>
+    </section>
+    <section class="right">
+      <img src="phpto/IMG-20261023-WA0089.jpg" alt="Birthday card" class="welcome-photo">
+    </section>
+  </div>
+  <nav class="nav"><button class="btn ghost" data-go="gate">← Back</button><span class="small">Made for Sakshi</span><button class="btn" data-go="envelope">Continue ♥</button></nav>
+</main>
+
+<!-- 4 ENVELOPE -->
+<main id="envelope" class="screen center">
+  <p class="eyebrow">A NOTE FROM MY HEART</p>
+  <h2 class="big sm">There are things I need you to know</h2>
+  <div id="env" class="env" aria-hidden="true">
+    <div class="paperlet">Dear Sakshi,<br>♥</div>
+    <div class="front"></div><div class="flap"></div><div class="seal">♥</div>
+  </div>
+  <button id="openEnv" class="btn tap">TAP TO OPEN ✨</button>
+  <nav class="nav"><button class="btn ghost" data-go="welcome">← Back</button><button id="toLetter" class="btn" data-go="letter" hidden>Open Letter</button></nav>
+</main>
+
+<!-- 5 LETTER -->
+<main id="letter" class="screen">
+  <h2 class="big sm">A letter, just for you</h2>
+  <article id="letterBody" class="paper letter">
+    <p>Dear Sakshi,</p>
+    <p>Happy 22nd Birthday! ❤️</p>
+    <p>I don't know if I say it enough, but I'm genuinely grateful that you're a part of my life.</p>
+    <p>Some people enter our lives and make even the most ordinary moments feel special. You're one of those people. From random conversations and silly jokes to the little memories that might seem ordinary to everyone else, these are the things that make our friendship so special to me.</p>
+    <p>Today, I hope you give yourself the same kindness, happiness, and love that you bring into the lives of people around you.</p>
+    <p>May this new chapter bring you beautiful surprises, exciting opportunities, endless reasons to smile, and the courage to follow everything your heart wishes for.</p>
+    <p>Never forget how special you are. You deserve happiness that feels peaceful, friendships that feel genuine, and moments that make you think, 'Life is beautiful.'</p>
+    <p>And no matter how busy life becomes or how much things change, I hope we always have room for our random talks, our laughter, and our little memories.</p>
+    <p>Happy Birthday once again, Sakshi.</p>
+    <p>Keep smiling, keep shining, and keep being the wonderful person you are.</p>
+    <p class="script">With lots of love,<br>Your best friend ❤️</p>
+  </article>
+  <button id="fullLetter" class="btn ghost">Show full letter</button>
+  <p class="script">Some surprises are still waiting...</p>
+  <nav class="nav"><button class="btn ghost" data-go="envelope">← Back</button><button class="btn" data-go="memories">View Our Memories →</button></nav>
+</main>
+
+<!-- 6 MEMORIES -->
+<main id="memories" class="screen center">
+  <p class="eyebrow">A WALK DOWN MEMORY LANE</p>
+  <h2 class="big sm">Our Beautiful Moments Together</h2>
+  <p>Every picture tells a story of our friendship</p>
+  <div class="gallery">
+    <img src="phpto/IMG-20261023-WA0050.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0068.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0070.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0071.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0073.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0074.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0075.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0076.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0077.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0078.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0079.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0080.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0081.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0082.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0083.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0084.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0085.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0086.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0087.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0089.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0090.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0091.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0092.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0093.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0094.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0095.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0096.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0097.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0098.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0099.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0100.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0101.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0102.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0103.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0104.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0105.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0106.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0107.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0108.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0109.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0110.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0111.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0112.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0113.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0114.jpg" alt="Memory" class="gallery-item">
+    <img src="phpto/IMG-20261023-WA0115.jpg" alt="Memory" class="gallery-item">
+  </div>
+  <p class="script">So many beautiful moments with you ❤️</p>
+  <nav class="nav"><button class="btn ghost" data-go="letter">← Back</button><button class="btn" data-go="scratch">Continue to your little surprise →</button></nav>
+</main>
+
+<!-- 7 SCRATCH -->
+<main id="scratch" class="screen center">
+  <h2 class="big sm">Find the secret hiding under the sparkles ✨</h2>
+  <p>A little birthday treat, reserved especially for you.</p>
+  <div class="coupon paper">
+    <div class="reward" id="reward">
+      <p class="eyebrow">BIRTHDAY COUPON</p><h3>ONE WISH, GRANTED ❤️</h3>
+      <p>Redeemable for unlimited hugs, random conversations, late-night talks, and one special birthday treat.</p>
+      <p class="script">Made exclusively for Sakshi</p>
+    </div>
+    <canvas id="scratchCanvas" aria-label="Scratch surface"></canvas>
+  </div>
+  <button id="revealBtn" class="btn ghost">Reveal without scratching</button>
+  <p id="scratchMsg" class="script" aria-live="polite"></p>
+  <nav class="nav"><button class="btn ghost" data-go="letter">← Back</button><button id="toCake" class="btn" data-go="cake" hidden>Continue ♥</button></nav>
+</main>
+
+<!-- 7 CAKE -->
+<main id="cake" class="screen center">
+  <h2 class="big sm">Every birthday deserves a little magic</h2>
+  <p>Make a wish, Sakshi. This moment is yours.</p>
+  <svg id="cakeSvg" viewBox="0 0 300 270" role="img" aria-label="Three-layer birthday cake with candles">
+    <defs>
+      <clipPath id="cl"><polygon points="0,30 170,30 128,270 0,270"/></clipPath>
+      <clipPath id="cr"><polygon points="170,30 300,30 300,270 128,270"/></clipPath>
+      <g id="cakeBody">
+        <rect x="40" y="170" width="220" height="62" rx="10" fill="#F3CECC"/>
+        <rect x="65" y="124" width="170" height="50" rx="10" fill="#FFF8EF"/>
+        <rect x="90" y="84" width="120" height="44" rx="10" fill="#C66A76"/>
+        <path d="M40 176q22 18 44 0t44 0 44 0 44 0 44 0" fill="none" stroke="#FFF8EF" stroke-width="9"/>
+        <path d="M65 130q21 14 42 0t42 0 42 0 42 0" fill="none" stroke="#813846" stroke-width="6"/>
+        <g fill="#B8283C"><circle cx="105" cy="82" r="7"/><circle cx="150" cy="82" r="7"/><circle cx="195" cy="82" r="7"/></g>
+      </g>
+    </defs>
+    <ellipse cx="150" cy="240" rx="140" ry="14" fill="#D7B58B"/>
+    <g class="half l"><g clip-path="url(#cl)"><use href="#cakeBody"/></g></g>
+    <g class="half r"><g clip-path="url(#cr)"><use href="#cakeBody"/></g></g>
+    <g id="candles">
+      <g><rect x="122" y="46" width="7" height="30" fill="#D7B58B"/><ellipse class="flame" cx="125.5" cy="38" rx="5" ry="10" fill="#FFB23E"/></g>
+      <g><rect x="146" y="46" width="7" height="30" fill="#F3CECC"/><ellipse class="flame" cx="149.5" cy="38" rx="5" ry="10" fill="#FFB23E"/></g>
+      <g><rect x="170" y="46" width="7" height="30" fill="#D7B58B"/><ellipse class="flame" cx="173.5" cy="38" rx="5" ry="10" fill="#FFB23E"/></g>
+    </g>
+    <g id="knife"><rect x="-4" y="-40" width="8" height="40" rx="3" fill="#302125"/><path d="M-4 0h8v70l-8 14z" fill="#e6e6ea" stroke="#999"/></g>
+  </svg>
+  <p class="script">Happy 22nd Birthday, Sakshi!</p>
+  <p id="cakeMsg" class="msg" aria-live="polite"></p>
+  <div class="row"><button id="wishBtn" class="btn ghost">Make a Wish ✨</button><button id="blowBtn" class="btn ghost">Blow Out Candles</button><button id="cutBtn" class="btn">Let's Cut the Cake 🎂</button></div>
+  <nav class="nav"><button class="btn ghost" data-go="scratch">← Back</button><button id="toGift" class="btn" data-go="gift" hidden>Continue ♥</button></nav>
+</main>
+
+<!-- 8 GIFT -->
+<main id="gift" class="screen center">
+  <h2 class="big sm">One last thing...</h2>
+  <p>There's something waiting just for you.</p>
+  <div id="giftBox" class="gift" aria-hidden="true">
+    <div class="light"></div>
+    <div class="lid"><i class="bow">🎀</i></div>
+    <div class="box"><i class="rib"></i></div>
+  </div>
+  <button id="openGift" class="btn">Open Your Gift 🎁</button>
+  <nav class="nav"><button class="btn ghost" data-go="cake">← Back</button></nav>
+</main>
+
+<!-- 9 FINAL -->
+<main id="final" class="screen center">
+  <p class="eyebrow">It was always yours</p>
+  <h2 class="big sm f1">Happy 22th Birthday, Sakshi ❤️</h2>
+  <p class="f2 long">The real gift is not in this box. It is every chapter you just walked through, the locked door only you could open, the scratch card, the love meter that refused to stop at 100, the letter, the photo bank, and a cake cut with your own hands.<br><br>Consider all of it yours. Forever. No expiry, no conditions.</p>
+  <p class="f3">Unlimited hugs. Late-night calls. One wish, granted. Me, always</p>
+  <img src="phpto/IMG-20261023-WA0071.jpg" alt="Sakshi and friend together" class="memory-photo">
+  <img src="phpto/IMG-20261023-WA0070.jpg" alt="Special memory" class="memory-photo">
+  <p class="f4 script">Gift accepted <span class="beat">❤️</span></p>
+  <img id="thanks" class="thanks" src="assets/images/thank-you.png" alt="A thank-you illustration" width="220">
+  <button id="thankBtn" class="btn">Thank You ❤️</button>
+  <p id="thankMsg" class="script" aria-live="polite"></p>
+  <button id="replay" class="btn ghost">Replay Experience</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
